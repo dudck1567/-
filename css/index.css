@@ -193,15 +193,15 @@ margin:0 10px;}
 
 /* article3 */
 .article3{text-align: center;}
-.article3 .subtitle{ margin-bottom: 30px;}
-.article3 .subtitle h2{ 
+.subtitle{padding-bottom: 30px;}
+.subtitle h2{ 
     color:#232323; 
     font-size:32px; 
     padding: 70px 0 20px; 
     letter-spacing: 0.1em;
 }
-.article3 .subtitle h2 span{ font-weight: bold;}
-.article3 .subtitle p{ font-size: 14px; color:#6f6f6f; line-height: 1.7;}
+.subtitle h2 span{ font-weight: bold;}
+.subtitle p{ font-size: 14px; color:#6f6f6f; line-height: 1.7;}
 
 
 .article3 ul li{ float: left; width: 33.333%; padding: 40px 10px 70px;}
@@ -305,18 +305,33 @@ margin:0 10px;}
     padding: 0 50px;
 }
 .article4 .slidetxt div:nth-of-type(1){
-    font-size:18px;
+    font-size:16px;
+    transform: translateY(80px);
+    font-family: 'Noto Sans KR', sans-serif;
     color: #fff;
     font-weight: bold;
-    letter-spacing: 0.1em; 
+    letter-spacing: 0.1em;  
+    transition: all 0.3s;
 }
 .article4 .slidetxt div:nth-of-type(2){
-    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif; 
+    transform: translateY(40px); 
+    opacity: 0;
+    font-weight: 300;
+    color: #ccc;
     font-size: 14px;
     padding:30px 40px 30px 0;
-    line-height: 1.6;
+    line-height: 1.6;    
+    transition: all 0.3s;
 }
-.article4 .slidetxt a:nth-of-type(1){
+.article4 .slide:hover .slidetxt div:nth-of-type(1){
+    transform: translateY(0);
+}
+.article4 .slide:hover .slidetxt div:nth-of-type(2){
+    transform: translateY(0);
+    opacity: 1;
+}
+.article4 .slidetxt a:nth-of-type(1){ 
     font-size: 10px;
     display:inline-block;
     background: #fff;
@@ -328,7 +343,11 @@ margin:0 10px;}
     width:20%; height:1px;
     background: #fff;
     margin-top: 35px;
+    transition: all 0.3s;
 
+}
+.article4 .slide:hover .slidetxt div:nth-of-type(3){
+    width:60%;
 }
 .article4 .slidetxt a:nth-of-type(1):hover{
     background:transparent;
@@ -367,7 +386,7 @@ margin:0 10px;}
 .article5{
     background: url(../image/workbg.png) no-repeat center;
     background-size: cover;
-    width:100%; height: 500px;
+    width:100%; height: 550px;
     text-align: center;
     position: relative;
 }
@@ -452,15 +471,14 @@ margin:0 10px;}
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: lighter;
 }
-.article6 > div > div:nth-child(1) ul li > p.on{
+/* .article6 > div > div:nth-child(1) ul li > p.on{
     display: block;
-    animation: open 0.5s both;
-}
+} */
 
 
 /* article7 */
 
-.article7{width:100%; }
+.article7{width:100%; overflow: hidden;}
 .article7 ul li{
     float: left; width: 25%; height: 100%;
     padding: 4% ; 
@@ -484,4 +502,188 @@ margin:0 10px;}
     font-weight: 300;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.8;
+}
+
+/* article8 */
+.article8 .slide_group3 .slide1{
+    height: 770px;
+    background: url(../image/main14.jpg) no-repeat center;
+    background-size: cover;
+}
+.article8 .slide_group3 .slide2{
+    height:770px;
+    background: url(../image/main13.jpg) no-repeat center;
+    background-size: cover;
+}
+.article8 .slide_group3 .slide3{
+    height: 770px;
+    background: url(../image/main12.jpg) no-repeat center;
+    background-size: cover;
+}
+.article8 .slide{position: relative;}
+.article8 .slide > div{
+    position: absolute;
+    top: 10%; left: 8%; bottom:10%;
+    width: 33%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5% 5%;
+}
+.article8 .slide > div h3{
+    font-size: 32px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+.article8 .slide > div p{
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+.article8 .slide > div a{
+    font-size: 11px;
+    color: #232323;
+    line-height: 1.5;
+    padding: 10px 24px;
+    background: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    transition: all 0.5s;
+}
+.article8 .slide > div a:hover{
+    background:transparent;
+    color: #fff;
+}
+
+/* 슬라이드 버튼 */
+.article8 .slide_group3{
+    position: relative;
+   
+}
+.article8 .slide_group3 .slick-arrow{
+    background: #ff214f;
+    position: absolute;
+    left: 41%; top: 50%;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+.article8 .slide_group3 .prev{
+    position:absolute;
+    top:81.5%; 
+    font-size: 20px;
+    transform: translateY(-50%) rotate(90deg);
+    z-index: 999;
+}
+
+.article8 .slide_group3 .next{
+    position:absolute;
+    top: 87%; 
+    font-size: 20px;
+    transform: translateY(-50%) rotate(90deg); 
+} 
+
+/* article9 */
+/* h2 span p 태그 설정은 article3번에서 했음 */
+.article9{
+    text-align: center;
+    width: 100%;
+    background: url(../image/homepage-9-parallax.jpg);
+    padding-bottom: 70px;
+}
+.article9 .subtitle p { padding-bottom: 30px;}
+.article9 .subtitle{padding-bottom: 60px}
+.article9 ul li{
+    float: left;
+    width: 32%; margin-right:2%; margin-bottom: 2%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.article9 ul li:nth-child(3n){margin-right: 0;}
+.article9 ul li > div:nth-child(2){
+    position:absolute;
+    width: 100%; height: 100%;
+    padding: auto;
+    background: #fff;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    padding: 37% 0;
+    line-height: 1.7;
+    opacity: 0;
+    transition: all 0.3s;
+
+}
+.article9 ul li > div:nth-child(2) h4{
+    font-size: 16px;
+    color: #232323;
+}
+.article9 ul li > div:nth-child(2) p{
+    font-size: 12px;
+    color: #939393;
+}
+.article9 ul li > div:nth-child(2) a{ 
+    position: absolute;
+    top: 5%; right: 7%;
+    font-size: 20px;
+    color:#2c53af;
+}
+.article9 ul li:hover > div:nth-child(2){
+    opacity: 1;
+    width: 90%; height: 90%;
+}
+.article9 ul li > div:nth-child(1) img{
+    transition: all 0.3s;
+}
+.article9 ul li:hover > div:nth-child(1) img{
+    transform: scale(1.2);
+    filter:blur(3px)
+}
+
+/* article10 */
+.article10{ width: 100%; height: 700px; }
+.article10 > ul > li{
+    float: left;
+    width: 50%; height: 100%;
+}
+.article10 > ul > li:nth-child(2) > div{
+    background: #333;
+    color: #fff;
+    float: left;
+    width: 50%;  height: 50%;
+}
+
+/* footer */
+#footer{
+    font-family: 'Noto Sans KR', sans-serif;
+    width:100%; height: 350px;
+    background: #1c1c1c;
+    color:#626262; 
+    padding: 5% 0;
+    line-height: 1.5;
+    margin: 0 auto; 
+}
+#footer ul:nth-child(1){padding-bottom: 2.5%; border-bottom: 1px solid #626262}
+#footer ul:nth-child(1) li{
+    width:33.333%; float: left;
+    font-size: 14px;
+}
+#footer ul:nth-child(1) li:nth-child(1){
+    font-size: 25px;
+}
+#footer ul:nth-child(1) li:nth-child(3) img{
+    height: 28px;
+    display: block; margin-bottom: 13px;
+}
+#footer ul:nth-child(2) li{
+    padding-top: 2.5%;
+    width:50%; float: left;
+    font-size: 12px;
+}
+#footer ul:nth-child(2) li:nth-child(2){
+    text-align: right;
 }
