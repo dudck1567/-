@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/rwdindex.css">
     <script src="js/jquery-3.5.1.min.js"></script> 
     <script src="js/slick.min.js"></script>
 </head>
@@ -45,20 +46,24 @@
                     </div>
                 </div>
             </div>
-    
-            <div class="row">
+            <div class="row cf">
                 <div class="logo">
                     <a href="#"><img src="image/logo.png" alt="VBWEB"></a>
                 </div>
+                <div class="open">
+                        <span class="blind">메뉴열기</span>
+                        <i class='fas fa-bars'></i>
+                </div>
                 <div class="nav">
-                    <ul class="depth1 row">
-                        <li><a href="#none">ABOUT US</a>
+                    <ul class="depth1">
+                        <li>
+                            <a href="#none">ABOUT US<i class="fas fa-angle-down"></i></a>
                             <ul class="depth2">
                                 <li><a href="#none">Introduction</a></li>
                                 <li><a href="#none">Contact us</a></li>
                             </ul>
                         </li>
-                        <li><a href="#none">BUISNESS</a>
+                        <li><a href="#none">BUISNESS<i class="fas fa-angle-down"></i></a>
                             <ul class="depth2">
                                 <li><a href="#none">Sample Page 01</a></li>
                                 <li><a href="#none">Sample Page 02</a></li>
@@ -66,7 +71,7 @@
                                 <li><a href="#none">Sample Page 04</a></li>
                             </ul>
                         </li>
-                        <li><a href="#none">PROTFOLIO</a>
+                        <li><a href="#none">PROTFOLIO<i class="fas fa-angle-down"></i></a>
                             <ul class="depth2">
                                 <li><a href="#none">Sample Page 01</a></li>
                                 <li><a href="#none">Sample Page 02</a></li>
@@ -75,13 +80,13 @@
                                 <li><a href="#none">Sample Page 05</a></li>
                             </ul>
                         </li>
-                        <li><a href="#none">REQUEST</a>
+                        <li><a href="#none">REQUEST<i class="fas fa-angle-down"></i></a>
                             <ul class="depth2">
                                 <li><a href="#none">Sample Page 01</a></li>
                                 <li><a href="#none">Sample Page 02</a></li>
                             </ul>
                         </li>
-                        <li><a href="#none">CUSTOMER CENTER</a>
+                        <li><a href="#none">CUSTOMER CENTER<i class="fas fa-angle-down"></i></a>
                             <ul class="depth2">
                                 <li><a href="#none">Sample Page 01</a></li>
                                 <li><a href="#none">Sample Page 02</a></li>
@@ -92,7 +97,11 @@
                         <li><a href="#none">ELEMENTS</a></li>
                     </ul>                
                 </div>
-            </div>
+                <div class="close">
+                        <span class="blind">메뉴닫기</span>
+                        <i class='fas fa-times'></i>
+                </div>
+           </div>
         </header>
         <section id="section">
             <article class="article1">
@@ -113,7 +122,7 @@
             </article>
             <article class="article2">
                 <div>
-                    <ul class="row">
+                    <ul class="row cf">
                         <li>
                             <div><i class="fab fa-laravel"></i></div>
                             <div>Live website builder</div>
@@ -437,28 +446,36 @@
             <article class="article10">
                 <ul class="cf">
                     <li class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202408.3397240566!2d126.83365892502272!3d37.563772938329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2z7ISc7Jq47Yq567OE7Iuc!5e0!3m2!1sko!2skr!4v1613637601260!5m2!1sko!2skr" width="100%" height="700px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202408.3397240566!2d126.83365892502272!3d37.563772938329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2z7ISc7Jq47Yq567OE7Iuc!5e0!3m2!1sko!2skr!4v1613637601260!5m2!1sko!2skr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </li>
                     <li class="cf">
                         <div>
-                            <i class="fas fa-map-marked-alt"></i>
-                            <p>CONTACT ADDRESS</p>
-                            <p>Sky Officetel 617<br>451, Gangseo-ro,<br>Gangseo-gu, Seoul</p>
+                            <div>
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>CONTACT ADDRESS</p>
+                                <p>Sky Officetel 617<br>451, Gangseo-ro, Gangseo-gu,<br>Seoul</p>
+                            </div>
                         </div>
                         <div>
-                            <i class="fas fa-comment-dots"></i>
-                            <p>LET'S TALK</p>
-                            <p>Phone: 010-4640-8645<br>Fax: 0504-475-8645<br>Kakao ID: sangmart</p>
+                            <div>
+                                <i class="fas fa-comment-dots"></i>
+                                <p>LET'S TALK</p>
+                                <p>Phone: 010-4640-8645<br>Fax: 0504-475-8645<br>Kakao ID: sangmart</p>
+                            </div>
                         </div>
                         <div>
-                            <i class="fas fa-envelope-open"></i>
-                            <p>EMAIL US</p>
-                            <p>sangmart@naver.com</p>
+                            <div>
+                                <i class="fas fa-envelope-open"></i>
+                                <p>EMAIL US</p>
+                                <p>sangmart@naver.com</p>
+                            </div>
                         </div>
                         <div> 
-                            <i class="fas fa-business-time"></i>
-                            <p>WORKING HOURS</p>
-                            <p>Mon to Sat - 9 AM to 11 PM<br>Sunday - 10 AM to 6 PM</p>
+                           <div>
+                                <i class="fas fa-business-time"></i>
+                                <p>WORKING HOURS</p>
+                                <p>Mon to Sat - 9 AM to 11 PM<br>Sunday - 10 AM to 6 PM</p>
+                           </di>
                         </div>
                     </li>
                 </ul>
@@ -466,7 +483,7 @@
         </section>
         <footer id="footer">
             <ul class="row cf">
-                <li>Seoul Based Creative<br>Studio</li>
+                <li>Seoul Based Creative Studio</li>
                 <li>Sky Officetel 617<br>
                     451, Gangseo-ro, Gangseo-gu, Seoul<br>
                     sangmart@naver.com | 010 . 4640 . 8645</li>
@@ -478,7 +495,7 @@
                     <a href="#none">DRIBBBLE</a>
                 </li>
             </ul>
-            <ul class="row">
+            <ul class="row cf">
                 <li>호명 비쥬얼박스 대표 : 최상영 개인정보책임자 : 최상영 사업자등록번호 : 109-11-65984<br>통신판매업신고번호 : 제2013-서울강서-1002호 서울특별시 강서구 강서로 451 유일스카이 오피스텔 617호<br>고객지원 : 문의 게시판 또는 010-4640-8645 (운영시간 10:00 ~ 17:00 점심: 11:30-13:00, 주말/공휴일은 제외)</li>
                 <li>
                     &copy; 2018 VBWEB is Proudly Powered by VBWEB
