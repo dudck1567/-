@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR:wght@300;400&display=swap');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+body{font-family: 'Montserrat', sans-serif;}
+.row {max-width : 1170px; margin: 0 auto; padding: 0 10px;}
+
+
+/* 상단 정보 */
+/* #header.min .top{display: none;}
+#header.min .row{display: none;} */
+#header {width:100%; background: #fff; position:fixed; top:0; left:0; z-index:9999;}
+#header .top{ 
+    background: #000; 
+    padding: 6px 0; 
+    overflow: hidden; 
+    color: #fff;
+    font-size: 11px;
+    line-height: 23px;
+}
+#header .topleft{ float:left; }
+#header .topleft li{ display: inline-block; transition: all 0.3s;}
+#header .topleft li:hover{ color:red;}
+#header .topleft div{ display: inline-block; width:1px; height: 8px; background: #4f4f4f; margin:0 10px;}
+#header .topright{ float:right; font-weight: bold; }
+#header .topright li{ display:inline-block;}
+#header .topright li a:hover{ color:#28bdbe;}
+#header .topright div{ display: inline-block; width:1px; height: 8px; background: #4f4f4f;
+margin:0 10px;}
+#header .topright li a{ padding: 0 5px; }
+#header .topright li:nth-of-type(3) img{ width:20px; margin-bottom:2px;}
+#header .topright li:nth-of-type(3) a:nth-child(3){ margin-right: 10px;}
+
+
+/* 네비게이션 */
+#header .open,
+#header .close { display:none }
+#header .logo{float:left; padding: 15px 0;}
+#header .nav{
+    float:right; 
+    font-size: 14px;
+    font-weight: bold;
+}
+#header .nav .depth1 > li { 
+    float:left; 
+    text-align: center; 
+    position:relative;
+}
+#header .nav .depth1 > li > a {
+    display: block; 
+    padding: 26px 20px;  
+    transition: all 0.2s;
+}
+#header .nav .depth1 > li > a > i{
+    display: none;
+    float: right;
+    font-size: 17px;
+}
+#header .nav .depth1 > li:hover > a{ color: #a6a6a6; }
+#header .nav .depth1 > li.on .depth2{ display:block;}
+#header .nav .depth2{ 
+    display:none;
+    position: absolute; 
+    top:100%; left:0%; 
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    padding: 15px 0;
+    background: #232323; 
+    color: #ddd;
+    z-index: 99999;
+
+}
+#header .nav .depth2 li{ 
+    width: 220px; 
+}
+  
+#header .nav .depth2 li a{
+    display:block;
+    padding: 10px 0px 10px 25px;
+    transition: all 0.3s;
+}
+#header .nav .depth2 li:hover a{
+    color:#a6a6a6;
+    padding-left: 30px;
+}
+
+
+/* 로그인 탑 */
+.toppic{
+    height: 350px; width:100%;
+    background: url(../image/parallax-bg16.jpg) no-repeat;
+    background-position: 0 30%;
+    background-size: cover;
+    position: relative;
+}
+.toppic > div{
+    color: #fff;
+    text-align: center;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%);
+    z-index:99;
+}
+.toppic h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.toppic p{ line-height: 1.5; color:#bbb; font-size: 14px;}
+.toppic:after{
+    content:'';
+    position:absolute;
+    top:0; bottom:0; right:0; left:0;
+    background: rgba(0,0,0,0.5);
+}
+
+/* 로그인 */
+#section{ font-family: 'Noto Sans KR', sans-serif;}
+legend{display:none;}
+
+.memBox{ margin:80px auto; padding: 80px 0; text-align: center; width: 600px; height: 600px; box-shadow:0 0 15px rgb(0 0 0 / 10%)}
+.memBox h2{font-size: 24px; padding-bottom: 40px;  color:#333; letter-spacing: 3px;  font-family: 'Montserrat', sans-serif;}
+.memBox h3{font-size: 18px; padding: 20px 0; color:#777; font-weight: bold; letter-spacing: 1px;}
+.memBox fieldset{width: 400px; margin: 0 auto;}
+
+.memBox .agree{background: #eee; padding: 20px}
+.memBox .agree > div{ background: #fff;
+    font-weight: lighter;
+    height: 250px; overflow-y: auto;
+    line-height: 1.4; padding:10px;
+    margin-bottom: 20px;
+}
+.memBox .loginbtn{text-align: center;}
+.memBox .loginbtn button{width:400px; height:40px;
+    font-family: 'Montserrat', sans-serif;
+    border:none; background:#2c3546;
+    margin:30px 10px; border-radius: 50px;
+    color: #fff; font-size:15px;
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+
+.memBox colgroup col:nth-child(1) {
+    width:10%;}
+.memBox colgroup col:nth-child(2) {
+    width:70%; }
+.memBox #idbox, .memBox #pwbox{ width: 330px; padding: 10px; border: 1px solid #ddd; background: #eee; border-radius: 3px;;}
+
+.memBox th,
+.memBox td {
+    padding:10px; text-align:left; 
+    vertical-align:middle;
+    height: 50px;
+}    
+
+.memBox .others{width: 400px;  margin:0 auto; line-height: 1.4;}
+.memBox .others ul:nth-of-type(1){padding-bottom: 20px; border-bottom: 1px solid #ddd;}
+.memBox .others ul:nth-of-type(1) li{width:50%; float:left;}
+.memBox .others ul:nth-of-type(1) li:nth-child(1){width:53%; font-size: 11px; color:#999; text-align: left;}
+.memBox .others ul:nth-of-type(1) li:nth-child(2){width:47%; text-align: right;}
+.memBox .others ul:nth-of-type(1) li:nth-child(2) a{
+    font-size: 11px; color:#fff; background: #4B637B; padding: 5px 20px;
+    border-radius: 2px;
+}
+
+.memBox .others ul:nth-of-type(2){padding: 30px 0 20px 0; font-size: 11px; color:#999; text-align: left;}
+.memBox .others ul:nth-of-type(3){text-align: right;}
+.memBox .others ul:nth-of-type(3) li{float:right; margin-left: 10px;}
+.memBox .others ul:nth-of-type(3) li a{
+    display: inline-block; color:#333; font-size: 12px; box-shadow:1px 1px 5px rgb(0 0 0 / 20%);
+    padding: 3px 20px; border-radius: 2px;
+}
+
+
+
+
+/* footer */
+#footer{
+    font-family: 'Noto Sans KR', sans-serif;
+    width:100%; height: 350px;
+    background: #1c1c1c;
+    color:#626262; 
+    padding: 5% 0;
+    line-height: 1.5;
+    margin: 0 auto; 
+}
+#footer ul:nth-child(1){padding-bottom: 2.5%; border-bottom: 1px solid #626262}
+#footer ul:nth-child(1) li{
+    width:33.333%; float: left;
+    font-size: 14px;
+}
+#footer ul:nth-child(1) li:nth-child(1){padding-right: 0%;}
+#footer ul:nth-child(1) li:nth-child(1){
+    font-size: 25px;
+}
+#footer ul:nth-child(1) li:nth-child(3) img{
+    height: 28px;
+    display: block; margin-bottom: 13px;
+}
+#footer ul:nth-child(2) li{
+    padding-top: 2.5%;
+    width:50%; float: left;
+    font-size: 12px;
+}
+#footer ul:nth-child(2) li:nth-child(2){
+    text-align: right;
+}

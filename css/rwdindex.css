@@ -1,8 +1,7 @@
 @media screen and (max-width:1024px){
     .row{max-width: 750px;}
     #header .topright li:nth-of-type(3) a:nth-child(3){ margin-right: 0;}
-    #header .row{position: relative; 
-        /* margin: 0 90px; */
+    #header .row{position: relative; margin: 0 auto;
     }
     #header .open, #header .close{ 
         font-size: 25px;
@@ -29,6 +28,7 @@
         border-bottom: 1px solid #333;
     }
  
+
     #header .nav .depth1 > li > a {
         display: block; 
         padding: 12px 20px;  
@@ -48,7 +48,7 @@
         font-weight: normal;
         font-size: 12px;
         padding: 5px 0;
-        background: #232323; 
+        background: #333; 
         color: #ddd;
         z-index: 9999;
     }
@@ -283,7 +283,7 @@
 .article9 ul li:nth-child(2n){margin-right: 0;}
 
 /* article10 */
-.article10{ width: 100%; height: 50vh; }
+.article10{ width: 100%; height: auto; }
 .article10 > ul > li{
     float: left;
     width: 100%; height: 100%;
@@ -316,7 +316,7 @@
 /* footer */
 #footer{
     font-family: 'Noto Sans KR', sans-serif;
-    width:100%; height: 350px;
+    width:100%; height: auto;
     background: #1c1c1c;
     color:#626262; 
     padding: 5% 0;
@@ -351,10 +351,11 @@
 } /* 1024 마지막 */
 
 @media screen and (max-width:768px){
+    #header .row{margin: 0 5%;}
     #header .topright{ display: none;}
     #header .topleft{ float:none; text-align: center;}
 
-    .article1 .slide_group img{ width: 300px;}
+    .article1 .slide_group img{ width: 330px;}
 
     /* article2 */
     .article2 > div{
@@ -384,12 +385,27 @@
     display:none;
 }
 
-
+/* article4 */
+.article4 .slidetxt{
+    width:100%;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translateX(-50%);
+    padding: 0 10%;
+}
 /* article5 */
-.article5 div p:nth-of-type(1){
+.article5{
     
+    width:100%; 
+    text-align: center;
+    position: relative;
+}
+.article5 div p:nth-of-type(1){
     font-size: 20px;
     line-height: 1.2;
+    background: url(../image/workbg.png) no-repeat center;
+    background-size: cover;
+    padding: 0 3%;
 }
 .article5 div p:nth-of-type(2){
     margin: 30px 0 70px;
@@ -411,28 +427,36 @@
 }
 
 /* article8 */
-
+.article8 .slide_group3{text-align: center;}
+.article8 .slide > div h3{
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.2;
+    margin: 20px 0;
+}
 .article8 .slide > div{
     position: absolute;
-    top: 10%; left: 0%; bottom:10%;
-    width: 90%;
-    margin: 0 3%;
+    top: 0%; left: 0%; bottom:0%; right:0%;
+    width: auto; height: auto;
+    margin: 5%;
     background: rgba(0, 0, 0, 0.5);
     padding: 5% 5%;
+  
 }
+
 .article8 .slide_group3 .slick-arrow{
     background: #ff214f;
     position: absolute;
-    left: 92%; top: 50%;
+    left: 90%; top: 100%;
     color:#fff;
     outline: none;
     border: none;
     font-size: 20px;
-    padding: 10px 15px;
+    padding: 8px 13px;
 }
 .article8 .slide_group3 .prev{
     position:absolute;
-    top:74%; 
+    top:80%;
     font-size: 20px;
     transform: translateY(-50%) rotate(90deg);
     z-index: 999;
@@ -440,7 +464,7 @@
 
 .article8 .slide_group3 .next{
     position:absolute;
-    top: 84.8%; 
+    top: 90%; 
     font-size: 20px;
     transform: translateY(-50%) rotate(90deg); 
 } 
@@ -466,7 +490,7 @@
 .article9 ul li:nth-child(2n){margin-right: 0;}
 
 /* article10 */
-.article10{ width: 100%; height: 50vh; }
+.article10{ width: 100%; height: auto; }
 .article10 > ul > li{
     float: left;
     width: 100%; height: 100%;
@@ -498,7 +522,7 @@
 
 #footer{
     font-family: 'Noto Sans KR', sans-serif;
-    width:100%; height: 350px;
+    width:100%; height: auto;
     background: #1c1c1c;
     color:#626262; 
     padding: 5% 0;
@@ -520,10 +544,10 @@
 }
 #footer ul:nth-child(1) li:nth-child(3) img{
     height: 28px;
-    display: block; margin-bottom: 13px;
+    display: block; margin: 13px auto;
 }
 #footer ul:nth-child(2) li{ 
-    padding: 3% 0;
+    padding: 3% 5%;
     width:100%; float: none;
     font-size: 12px;
 }
