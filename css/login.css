@@ -10,86 +10,6 @@ body{font-family: 'Montserrat', sans-serif;}
 .row {max-width : 1170px; margin: 0 auto; padding: 0 10px;}
 
 
-/* 상단 정보 */
-/* #header.min .top{display: none;}
-#header.min .row{display: none;} */
-#header {width:100%; background: #fff; position:fixed; top:0; left:0; z-index:9999;}
-#header .top{ 
-    background: #000; 
-    padding: 6px 0; 
-    overflow: hidden; 
-    color: #fff;
-    font-size: 11px;
-    line-height: 23px;
-}
-#header .topleft{ float:left; }
-#header .topleft li{ display: inline-block; transition: all 0.3s;}
-#header .topleft li:hover{ color:red;}
-#header .topleft div{ display: inline-block; width:1px; height: 8px; background: #4f4f4f; margin:0 10px;}
-#header .topright{ float:right; font-weight: bold; }
-#header .topright li{ display:inline-block;}
-#header .topright li a:hover{ color:#28bdbe;}
-#header .topright div{ display: inline-block; width:1px; height: 8px; background: #4f4f4f;
-margin:0 10px;}
-#header .topright li a{ padding: 0 5px; }
-#header .topright li:nth-of-type(3) img{ width:20px; margin-bottom:2px;}
-#header .topright li:nth-of-type(3) a:nth-child(3){ margin-right: 10px;}
-
-
-/* 네비게이션 */
-#header .open,
-#header .close { display:none }
-#header .logo{float:left; padding: 15px 0;}
-#header .nav{
-    float:right; 
-    font-size: 14px;
-    font-weight: bold;
-}
-#header .nav .depth1 > li { 
-    float:left; 
-    text-align: center; 
-    position:relative;
-}
-#header .nav .depth1 > li > a {
-    display: block; 
-    padding: 26px 20px;  
-    transition: all 0.2s;
-}
-#header .nav .depth1 > li > a > i{
-    display: none;
-    float: right;
-    font-size: 17px;
-}
-#header .nav .depth1 > li:hover > a{ color: #a6a6a6; }
-#header .nav .depth1 > li.on .depth2{ display:block;}
-#header .nav .depth2{ 
-    display:none;
-    position: absolute; 
-    top:100%; left:0%; 
-    text-align: left;
-    font-weight: normal;
-    font-size: 12px;
-    padding: 15px 0;
-    background: #232323; 
-    color: #ddd;
-    z-index: 99999;
-
-}
-#header .nav .depth2 li{ 
-    width: 220px; 
-}
-  
-#header .nav .depth2 li a{
-    display:block;
-    padding: 10px 0px 10px 25px;
-    transition: all 0.3s;
-}
-#header .nav .depth2 li:hover a{
-    color:#a6a6a6;
-    padding-left: 30px;
-}
-
-
 /* 로그인 탑 */
 .toppic{
     height: 350px; width:100%;
@@ -149,7 +69,7 @@ legend{display:none;}
     width:10%;}
 .memBox colgroup col:nth-child(2) {
     width:70%; }
-.memBox #idbox, .memBox #pwbox{ width: 330px; padding: 10px; border: 1px solid #ddd; background: #eee; border-radius: 3px;;}
+.memBox #idbox, .memBox #pwbox{ width: 330px; padding: 10px; border: 1px solid #ddd; background: #eee; border-radius: 3px;}
 
 .memBox th,
 .memBox td {
@@ -179,34 +99,3 @@ legend{display:none;}
 
 
 
-/* footer */
-#footer{
-    font-family: 'Noto Sans KR', sans-serif;
-    width:100%; height: 350px;
-    background: #1c1c1c;
-    color:#626262; 
-    padding: 5% 0;
-    line-height: 1.5;
-    margin: 0 auto; 
-}
-#footer ul:nth-child(1){padding-bottom: 2.5%; border-bottom: 1px solid #626262}
-#footer ul:nth-child(1) li{
-    width:33.333%; float: left;
-    font-size: 14px;
-}
-#footer ul:nth-child(1) li:nth-child(1){padding-right: 0%;}
-#footer ul:nth-child(1) li:nth-child(1){
-    font-size: 25px;
-}
-#footer ul:nth-child(1) li:nth-child(3) img{
-    height: 28px;
-    display: block; margin-bottom: 13px;
-}
-#footer ul:nth-child(2) li{
-    padding-top: 2.5%;
-    width:50%; float: left;
-    font-size: 12px;
-}
-#footer ul:nth-child(2) li:nth-child(2){
-    text-align: right;
-}

@@ -16,11 +16,10 @@ $('.nav .depth1 > li').hover(
             opacity:0
         }, 200,
         function(){
-        $(this).parent().removeClass('on')
+        $(this).removeClass('on')
         })
-    }
-    }
-)
+    } 
+    })
 
 var sct2 = 0;
 $(window).on('scroll', function(){
@@ -59,24 +58,26 @@ var ww = $(window).width()
 function init(){
     ww = $(window).width()
     if (ww > deviceSize1 && !$('html').hasClass('pc')){
-        $('html').addClass('pc').removeClass('tablet')
-        $('#header .nav .depth1 li').removeClass('on')
-
+        $('html').addClass('pc').removeClass('tablet mobile')
+        $('#header .nav .depth1 > li').removeClass('on')
+        $('#header .nav').css({display:'block'})
     } else if ( ww<=deviceSize1 && ww>deviceSize2 && !$('html').hasClass('tablet') ) {
         $('html').addClass('tablet').removeClass('pc mobile')
-        $('#header .nav').slideUp(300)
-        $('#header .nav .depth1 li').removeClass('on')
+        $('#header .nav').css({display:'none'})
+        $('#header .nav .depth1 > li').removeClass('on')
+        $('#header .nav .depth2').css({opacity:1})
         $('#header .close').removeClass('on')
         $('#header .open').addClass('on') 
     
     } else if ( ww<=deviceSize2 && !$('html').hasClass('mobile')) {
-        $('html').addClass('mobile').removeClass('tablet')
-        $('#header .nav').slideUp(300)
-        $('#header .nav .depth1 li').removeClass('on')
+        $('html').addClass('mobile').removeClass('tablet pc')
+        $('#header .nav').css({display:'none'})
+        $('#header .nav .depth1 > li').removeClass('on')
+        $('#header .nav .depth2').css({opacity:1})
         $('#header .close').removeClass('on')
-        $('#header .open').addClass('on')
+        $('#header .open').addClass('on') 
     
-    }
+    } 
 }
 init()
 $(window).on('resize', function(){
@@ -89,14 +90,14 @@ $('#header .open').on('click', function(){
     $(this).removeClass('on')
     $(this).next().slideDown(300)
     $(this).next().next().addClass('on')
-    $(this).next().find('i').addClass('on')
+    // $(this).next().find('i').addClass('on')
 })
-$('#header .close').on('click', function(){
+$('#header .close').on('click', function(){ 
     $(this).removeClass('on')
-    $(this).prev().slideUp(300)
+    $(this).prev().slideUp(300) // slideUp은 display:none이 된다. 따라서 display:block으로 되살려줘야함
     $(this).prev().prev().addClass('on')
-    $(this).prev().find('i').removeClass('on')
-})
+    // $(this).prev().find('i').removeClass('on')
+}) 
 
 // $('.depth1 > li').hover(
 //     function(){

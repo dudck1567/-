@@ -20,7 +20,7 @@
         top:100%;
         display: none;
     }
-    #header .nav.on{display:block;}
+    /* #header .nav.on{display:block;} */
     #header .nav .depth1 > li { 
         width: 100%;
         background: #232323;
@@ -35,10 +35,10 @@
         text-align: left; 
         transition: all 0.2s;
     }
-    #header .nav.on .depth1 > li > a > i{
-      display:block;
+    #header .nav .depth1 > li > a > i{
+      display:inline-block;
       color: #fff;
-    }
+    } 
     #header .nav .depth2{ 
         display:none;
         width: 100%;
@@ -51,7 +51,7 @@
         background: #333; 
         color: #ddd;
         z-index: 9999;
-    }
+    } 
 
     /* article2 */
     .article2 > div{
